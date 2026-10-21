@@ -2,6 +2,12 @@
 
 A personal developer portfolio showcasing my background, technical skills, and software development projects.
 
+## 🖥️ Portfolio Preview
+
+![Portfolio homepage preview](./portfolio-preview.jpeg)
+
+**Live website:** [View my portfolio](https://portfolio-chi-self-5jgodftr6m.vercel.app/)
+
 🌐 **Live Website:** [View My Portfolio](https://portfolio-chi-self-5jgodftr6m.vercel.app/)
 
 ## ✨ Overview
