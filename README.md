@@ -119,3 +119,11 @@ Software engineering student interested in software development, data, and artif
 ---
 
 *Building, learning, and improving — one project at a time.*
+
+## 📄 License & Copyright
+
+Copyright © 2026 LOYI Peniel.
+
+All rights reserved.
+
+This repository is publicly available for viewing and evaluation purposes. No permission is granted to reproduce, redistribute, modify, or use this code in other projects without prior written permission from the copyright holder, except where permitted by applicable law or third-party licenses.
