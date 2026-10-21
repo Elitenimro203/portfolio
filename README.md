@@ -1,50 +1,121 @@
-# Portfolio LOYI Peniel — migration Next.js
+# LOYI Peniel — Developer Portfolio
 
-Première base de migration depuis l'ébauche React + Vite. Cette version adopte Next.js App Router, TypeScript, Tailwind CSS v4, Motion et Lucide React.
+A personal developer portfolio showcasing my background, technical skills, and software development projects.
 
-## Lancer le projet
+🌐 **Live Website:** [View My Portfolio](https://portfolio-chi-self-5jgodftr6m.vercel.app/)
 
-Prérequis : Node.js 20.9 ou plus récent.
+## ✨ Overview
+
+This project is my personal portfolio, designed to present my work, development journey, and interests in software engineering, data, and artificial intelligence.
+
+Built with Next.js and TypeScript, it combines a responsive interface, interactive animations, and dedicated pages for individual projects.
+
+The portfolio is designed to make my work accessible across desktop and mobile devices while keeping the codebase modular and maintainable.
+
+## 🚀 Features
+
+- **Responsive Design** — Layouts adapted to desktop, tablet, and mobile screens.
+- **Dark and Light Themes** — Switch between visual themes.
+- **Interactive Animations** — Smooth motion effects using Motion.
+- **Project Showcase** — Structured project cards with dedicated detail pages.
+- **Centralized Project Data** — Project information managed separately from UI components.
+- **Modern Navigation** — Responsive navigation for different screen sizes.
+- **Deployment** — Published online using Vercel.
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| Next.js (App Router) | Application framework and routing |
+| TypeScript | Type-safe development |
+| Tailwind CSS v4 | Styling and responsive layouts |
+| Motion | Animations and interactions |
+| Lucide React | Icons |
+
+## 📂 Project Structure
+
+```text
+portfolio/
+├── app/                    # Routes, layouts and global styles
+├── components/             # Portfolio UI and interactive components
+├── data/
+│   └── projects.ts         # Structured project information
+├── public/
+│   └── images/             # Portrait and project assets
+├── package.json
+└── README.md
+```
+
+## ⚙️ Getting Started
+
+### Prerequisites
+
+- Node.js 20.9 or later
+- npm
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Elitenimro203/portfolio.git
+cd portfolio
+```
+
+Install the dependencies:
 
 ```bash
 npm install
+```
+
+Start the development server:
+
+```bash
 npm run dev
 ```
 
-Puis ouvrir http://localhost:3000.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Structure
+### Production Build
 
-- `app/`: route d'accueil, layout global, métadonnées et design tokens CSS.
-- `components/portfolio.tsx`: sections de la page et animations Motion.
-- `components/theme-toggle.tsx`: bascule clair/sombre.
-- `data/projects.ts`: contenu structuré des projets.
-- `public/images/peniel-portrait.png`: portrait personnel détouré et intégré au hero.
+To build the application for production:
 
-## À vérifier avant publication
+```bash
+npm run build
+```
 
-- Vérifier le détourage du portrait sur différents écrans et fonds. Le fond a été retiré automatiquement et peut nécessiter une retouche fine autour des cheveux et des épaules.
-- Mettre à jour l'adresse email et les URL LinkedIn/GitHub dans `components/portfolio.tsx`.
-- Vérifier descriptions, statuts, technologies et contribution exacte de chaque projet dans `data/projects.ts`.
-- Ajouter un CV PDF réel si le bouton de téléchargement est souhaité.
+## 🧭 Project Organization
 
-## Notes pédagogiques
+Project information is maintained in `data/projects.ts`, making it easier to update descriptions, technologies, roles, and other project details without restructuring the UI.
 
-Le composant principal est client car Motion, le menu mobile et le thème nécessitent de l'interactivité. Le layout reste côté serveur et porte les métadonnées. Les données projets sont séparées des composants pour faciliter la maintenance.
+Individual project pages use dynamic routing under `app/projets/[slug]/`, allowing each project to have its own dedicated page.
 
+## 🎯 Goals & Learning
 
-## Ajustements Hero V3
+This project is part of my journey toward building modern, maintainable web applications. It allows me to practice:
 
-- Portrait réduit et remonté pour éviter le débordement sur la section À propos.
-- Forme bleue et cercles décoratifs allégés, avec le portrait au premier plan.
-- Ajustements de dimensions desktop, tablette et mobile.
-- Le badge rouge « 1 Issue » visible en mode développement n'est pas un élément du design : consulter le terminal et l'overlay Next.js pour identifier la cause exacte.
+- Component-based architecture
+- TypeScript and Next.js App Router
+- Responsive interface development
+- Interactive UI design
+- Project organization and maintainability
+- Deployment and production builds
 
+## 🔮 Future Improvements
 
-## Pages projet (étape 1 du plan d'amélioration)
+- Enrich project pages with screenshots and detailed case studies.
+- Document my contributions and lessons learned for each project.
+- Continue improving accessibility, performance, and user experience.
 
-- Chaque carte de l'accueil mène à `/projets/<slug>` (`app/projets/[slug]/page.tsx`, pages statiques générées au build).
-- Tout le contenu vient de `data/projects.ts`. Champs à renseigner par toi : `role`, `learned`, `links`, `screenshots`. Une section vide n'est pas affichée.
-- En `npm run dev`, un encadré en pointillés liste ce qu'il reste à compléter sur chaque page (masqué en production).
-- Captures : à déposer dans `public/images/projets/<slug>/` puis à déclarer dans `screenshots`.
-- Dépôt privé : `privateRepo: true` affiche une mention à la place d'un lien.
+## 👤 Author
+
+**LOYI Peniel — Cypher T-203**
+
+Software engineering student interested in software development, data, and artificial intelligence.
+
+🌐 [Portfolio](https://portfolio-chi-self-5jgodftr6m.vercel.app/)  
+💻 [GitHub Profile](https://github.com/Elitenimro203)
+
+---
+
+*Building, learning, and improving — one project at a time.*
