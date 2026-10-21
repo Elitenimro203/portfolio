@@ -1,0 +1,55 @@
+/* ───────────── Étape 3 : parcours, compétences, grille projets ───────────── */
+
+/* Compétences */
+.journey-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:20px}
+.journey-actions .text-link{margin-top:0}
+.skill-group{margin-bottom:24px}
+.skill-group:last-child{margin-bottom:0}
+.skill-group h4{margin:0 0 10px;font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
+.skill-chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.skill-chips li{padding:6px 13px;border-radius:99px;font-size:12px;font-weight:700;border:1px solid var(--line);background:var(--surface)}
+.skill-group.is-solid .skill-chips li{background:var(--blue-soft);border-color:transparent;color:var(--blue)}
+.skill-group.is-growing .skill-chips li{border-style:dashed;border-color:var(--muted);color:var(--muted);background:transparent}
+
+/* Chronologie */
+.timeline-wrap{padding-bottom:84px}
+.timeline-wrap>.section-index{margin-bottom:22px}
+.timeline{margin:0;padding:0;list-style:none}
+.timeline-year{display:grid;grid-template-columns:170px minmax(0,1fr);gap:32px;padding:28px 0;border-top:1px solid var(--line)}
+.timeline-year>h3{margin:0;font-size:clamp(32px,3.6vw,50px);line-height:1;letter-spacing:-.06em;font-weight:850;color:var(--text);position:sticky;top:104px;align-self:start}
+.timeline-items{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.timeline-item{--k:var(--blue);display:grid;grid-template-columns:40px minmax(0,1fr);gap:16px;padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:var(--surface);transition:border-color .2s,transform .2s}
+.timeline-item:hover{border-color:var(--k);transform:translateX(3px)}
+.timeline-item.kind-experience{--k:var(--orange)}
+.timeline-item.kind-certification{--k:#087fbd}
+.timeline-item.kind-projet{--k:#1f9d63}
+:root[data-theme="dark"] .timeline-item.kind-certification{--k:#4cb3e8}
+:root[data-theme="dark"] .timeline-item.kind-projet{--k:#4cc487}
+.timeline-icon{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;color:var(--k);background:color-mix(in srgb,var(--k) 12%,transparent)}
+.timeline-meta{margin:0 0 4px;font-size:11px;color:var(--muted)}
+.timeline-meta b{text-transform:uppercase;letter-spacing:.12em;font-size:10px;color:var(--k)}
+.timeline-item h4{margin:0 0 3px;font-size:16px;line-height:1.3;letter-spacing:-.02em}
+.timeline-place{margin:0;font-size:13px;color:var(--muted)}
+.timeline-detail{margin:8px 0 0;font-size:13px}
+.timeline-item .text-link{margin-top:10px;font-size:12px}
+
+/* Grille des projets : 2 grandes cartes + 3 cartes (desktop uniquement) */
+@media(min-width:1051px){
+  .projects-section .project-grid{grid-template-columns:repeat(6,minmax(0,1fr))}
+  .projects-section .project-card{grid-column:span 2}
+  .projects-section .project-card.is-featured{grid-column:span 3}
+  .projects-section .project-card.is-featured .project-visual{height:190px}
+}
+
+/* Accent vert (GreenGrow) : carte d'accueil + page projet */
+.projects-section .project-green .project-visual{background:linear-gradient(140deg,#0d3b2a,#1f9d63)}
+.project-page.accent-green{--accent:#1f9d63}
+:root[data-theme="dark"] .project-page.accent-green{--accent:#4cc487}
+
+@media(max-width:720px){
+  .timeline-wrap{padding-bottom:56px}
+  .timeline-year{grid-template-columns:1fr;gap:14px;padding:22px 0}
+  .timeline-year>h3{position:static}
+  .timeline-item{grid-template-columns:34px minmax(0,1fr);gap:12px;padding:14px}
+  .timeline-icon{width:34px;height:34px}
+}
